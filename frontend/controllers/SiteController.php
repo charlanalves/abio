@@ -26,7 +26,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error','request'],
+                        'actions' => ['login', 'error','request','privacy-policy'],
                         'allow' => true,
                     ],
                     [
@@ -43,6 +43,11 @@ class SiteController extends Controller
                 ],
             ],
         ];
+    }
+    
+    public function actionPrivacyPolicy()
+    {   
+      return $this->render('privacypolicy');
     }
     /**
      * @inheritdoc
