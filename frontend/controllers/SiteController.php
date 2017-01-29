@@ -45,14 +45,6 @@ class SiteController extends Controller
         ];
     }
     
-    public function actionPrivacyPolicy()
-    {   
-        ini_set('display_errors', 1);
-
-error_reporting(E_ALL);
-
-      return $this->render('login');
-    }
     /**
      * @inheritdoc
      */
@@ -100,6 +92,12 @@ error_reporting(E_ALL);
         ];
     }
 
+    public function actionPrivacyPolicy()
+    {   
+        $this->layout = 'main-login';
+      return $this->render('privacypolicy');
+    }
+    
     /**
      * Displays homepage.
      *
