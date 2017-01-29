@@ -50,7 +50,8 @@ class SiteController extends Controller
         ini_set('display_errors', 1);
 
 error_reporting(E_ALL);
-      return $this->render('privacypolicy');
+
+      return $this->render('index');
     }
     /**
      * @inheritdoc
