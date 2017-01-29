@@ -51,7 +51,7 @@ class SiteController extends Controller
 
 error_reporting(E_ALL);
 
-      return $this->render('index');
+      return $this->render('login');
     }
     /**
      * @inheritdoc
