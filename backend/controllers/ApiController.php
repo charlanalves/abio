@@ -8,6 +8,9 @@ use yii\web\Response;
 use yii\helpers\ArrayHelper;
 use yii\data\ActiveDataProvider;
 use common\models\SignupForm;
+use common\models\User;
+use common\models\Notification;
+use frontend\models\Journal_pages as JournalPages;
 
 
 
@@ -34,7 +37,7 @@ class ApiController extends ActiveController
       return ArrayHelper::merge(parent::behaviors(), [
           [
               'class' => 'yii\filters\ContentNegotiator',
-              'only' => ['view', 'index'],  // in a controller
+              'only' => ['view', 'index','centralMethod'],  // in a controller
               // if in a module, use the following IDs for user actions
               // 'only' => ['user/view', 'user/index']
               'formats' => [
@@ -48,6 +51,189 @@ class ApiController extends ActiveController
       ]);
   }
   
+  
+ public function actionCentralMethod()
+ {
+     $action = \Yii::$app->request->post('action');
+     $params = \Yii::$app->request->post('params');
+     $trans = \Yii::$app->request->post('trans');
+     
+     try {
+        if (empty($action) || empty($params)){
+            throw new \Exception('Erro Interno XM028bc . Contate o suporte técnico');
+        }
+         if ($trans) {
+            $transaction = \Yii::$app->db->beginTransaction();
+        }
+        
+        $return = ['status' => true, 'message' => ''];
+        
+        $returnFn = call_user_func(array($this, $action), $params);
+        
+        if (is_array($returnFn)){
+            $return = array_merge($return, $returnFn);
+        }
+        
+        if ($trans) {
+            $transaction->commit();
+        }
+        
+        die(json_encode($return));
+        
+     }  catch (\Exception $e) {
+         if ($trans) {
+            $transaction->rollBack();
+        }
+        
+        $errorMessage =  $e->getMessage();
+         die(json_encode(['status' => false, 'message' => $errorMessage]));
+     }  catch (\yii\base\Exception $e){
+          $errorMessage =  $e->getMessage();
+          die(json_encode(['status' => false, 'message' => $errorMessage]));     
+     }  catch (\yii\db\Exception $e){
+          $errorMessage =  $e->getMessage();
+          die(json_encode(['status' => false, 'message' => 'Erro Interno. Tente novamente mais tarde']));
+     } 
+
+ }
+ 
+  public function getNotifyByUser($params)
+ {
+      header("Access-Control-Allow-Origin: *");   
+      
+      $userId = $params['id'];
+       
+      if (empty($userId)) {
+        throw new \Exception('Erro interno. O cod do usuário esta vazio');
+      }
+        
+      $nots = Notification::find()
+              ->where(['id_user' => $userId])              
+              ->asArray()
+              ->all();     
+        
+      return ['status' => true, 'message' => $nots];
+   
+  }
+  public function getJournalById($params)
+ {
+      header("Access-Control-Allow-Origin: *");   
+      
+      $id_journal_pages = $params['id_journal_page'];
+      $notification = $params['name'];
+      $replace = '<span class="anchor" style="background-color: #FFFF00; font-size: 19px;"><b>'.$notification.'</b></span>';
+      
+      if (empty($id_journal_pages)) {
+        throw new \Exception('Erro interno. O cod do usuário esta vazio');
+      }
+        
+      $jp = JournalPages::find()
+              ->where(['id_journal_pages' => $id_journal_pages])              
+              ->asArray()
+              ->all()[0];   
+      
+      $jp['content'] = str_ireplace($notification, $replace, $jp['content']);
+        
+      return ['status' => true, 'message' => $jp];
+   
+  }
+  public function getOccurencesByNot($params)
+  {
+      header("Access-Control-Allow-Origin: *");
+      
+      $not = new Notification;
+      $not->id_notification = $params['id_notification'];
+      $n = $not->getOccurencesNot();
+
+      return ['status' => true, 'message' => $n];
+  }
+  
+  public function deleteNotifyByUser($params)
+  {
+      header("Access-Control-Allow-Origin: *");
+          
+      $idNot = $params['id_notification'];
+        
+      if (empty($idNot)) {
+            throw new \Exception('Tente novamente');
+      }
+        
+      $not = Notification::findAll($idNot)[0];     
+      if (!$not->delete()) {
+            $erro = $not->getFirstErrors();
+            if (count($erro) > 0) {
+                throw new \Exception(array_values($erro)[0]);
+            }
+      }
+      
+      return ['status' => true, 'message' => 'Sucesso'];
+  }
+  
+  public function addNotifyByUser($params)
+ {
+       header("Access-Control-Allow-Origin: *");
+
+        $data = [];
+        $data['id_user'] = $params['user_data']['id'];
+        $data['name'] = $params['name'];
+
+         if (empty($data['id_user']) || empty($data['name'])) {
+              throw new \Exception('Por favor preencha todos os campos e tente novamente');
+        }
+
+        $not = new Notification;
+        $not->id_user = $data['id_user'];
+        $not->name = $data['name'];
+
+
+        if (!$not->save()){
+           $erro = $not->getFirstErrors();
+           throw new \Exception(array_values($erro)[0]);
+        }
+        
+        return ['message' => $not->getAttributes()];
+  }
+  
+   /**
+     * Signs user up.
+     *
+     * @return mixed
+     */
+    public function signup($params)
+    {
+        if (empty($params['email']) || empty($params['password'])) {
+            throw new \Exception('Por favor preencha todos os campos e tente novamente');
+        }
+
+        $email = $params['email'];
+        $userName = $params['email'];
+        $password = $params['password'];
+
+        $user = User::findByUsername($userName);
+        if (is_null($user)) {
+            $model = new SignupForm();
+
+            $model->username = $userName;
+            $model->password = $password;
+            $model->email = $email;
+
+            $user = $model->signup();
+
+            if (is_null($user)){
+                $erro = $model->getFirstErrors();
+                if (count($erro) > 0) {
+                    throw new \Exception(array_values($erro)[0]);
+                }
+            }
+
+            return ['message' => $user->getAttributes()];
+        }else {
+            if (!$user->validatePassword($password)) {
+                throw new \Exception('Usuário ou senha incorreta');
+            }
+        }
+    }
+    
    /**
      * Prepares the data provider that should return the requested collection of the models.
      * @return ActiveDataProvider
@@ -119,36 +305,6 @@ print_r(preg_split('/(Página)/si', $matches[0][0]));
   }
   
   
-   /**
-     * Signs user up.
-     *
-     * @return mixed
-     */
-    public function actionSignup($userName, $password, $email)
-    {
-        try {
-            if (empty($userName) || empty($password)|| empty($email)) {
-                throw new \Exception('Porfavor preencha todos os campos e tente novamente');
-            }
-            
-            
-            $model = new SignupForm();
-            
-            $model->username = $userName;
-            $model->password = $password;
-            $model->email = $email;
-            
-            $user = $model->signup();
-            
-            return $this->render('signup', [
-                'model' => $model,
-            ]);
-
-         } catch (Exception $e) {
-             $errorMessage =  $e->getMessage();
-             echo json_encode(['status' => false, 'message' =>$errorMessage]);
-        }   
-        
-    }
+  
 
 }
