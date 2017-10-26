@@ -54,6 +54,7 @@ class ApiController extends ActiveController
   
  public function actionCentralMethod()
  {
+	 header("Access-Control-Allow-Origin: *");   
      $action = \Yii::$app->request->post('action');
      $params = \Yii::$app->request->post('params');
      $trans = \Yii::$app->request->post('trans');
