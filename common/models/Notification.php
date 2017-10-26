@@ -43,7 +43,7 @@ class Notification extends ActiveRecord
     
  public static function tableName()
 {
-    return 'Notification';
+    return 'notification';
 }
 
  public function getOccurencesNot()
