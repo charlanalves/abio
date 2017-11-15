@@ -230,7 +230,7 @@ use yii\helpers\Html;
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       
-                        <span class="hidden-xs"><?=Yii::$app->user->identity->username?></span>
+                       
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -238,8 +238,8 @@ use yii\helpers\Html;
                           
 
                             <p>
-                                <?=Yii::$app->user->identity->username?>
-                                <small>Imprensa Oficial do Estado</small>
+                             
+                                <small>Imprensa Oficial de Contagem</small>
                             </p>
                         </li>
                         <!-- Menu Body -->
