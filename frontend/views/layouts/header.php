@@ -229,17 +229,18 @@ use yii\helpers\Html;
 
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      
-                       
+                        <img src="/abio/backend/web/images/logo_imprensa/<?=Yii::$app->user->identity->company->logo_url?>" class="user-image" alt="User Image"/>
+                        <span class="hidden-xs"><?=Yii::$app->user->identity->username?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                          
+                            <img src="/abio/backend/web/images/logo_imprensa/<?=Yii::$app->user->identity->company->logo_url?>" class="img-circle"
+                                 alt="User Image"/>
 
                             <p>
-                             
-                                <small>Imprensa Oficial de Contagem</small>
+                                <?=Yii::$app->user->identity->username?>
+                                <small>Imprensa Oficial do Estado</small>
                             </p>
                         </li>
                         <!-- Menu Body -->
