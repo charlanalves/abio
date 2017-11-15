@@ -5,7 +5,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="/abio/backend/web/images/logo_imprensa/<?=Yii::$app->user->identity->company->logo_url?>" class="img-circle" alt="Imprensa Oficial"/>
+                <img src="/backend/web/images/logo_imprensa/<?=Yii::$app->user->identity->company->logo_url?>" class="img-circle" alt="Imprensa Oficial"/>
             </div>
             <div class="pull-left info">
                 <p><?php //echo Yii::$app->user->identity->username?></p>
