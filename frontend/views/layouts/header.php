@@ -235,7 +235,7 @@ use yii\helpers\Html;
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="/abio/backend/web/images/logo_imprensa/<?=(isset(Yii::$app->user->identity->company->logo_url)?Yii::$app->user->identity->company->logo_url:"imagem_default.jpg"?>" class="img-circle"
+                            <img src="/abio/backend/web/images/logo_imprensa/<?=(isset(Yii::$app->user->identity->company->logo_url)?Yii::$app->user->identity->company->logo_url:'imagem_default.jpg'?>" class="img-circle"
                                  alt="User Image"/>
 
                             <p>
