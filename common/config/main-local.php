@@ -7,7 +7,7 @@ return [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=abio',
             'username' => 'root',
-            'password' => '#@abioSucce3ss',
+            'password' => 'lQKnvJCFXj9d',
             'charset' => 'utf8',
         ],
         'mailer' => [
