@@ -5,7 +5,7 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=abio',
+            'dsn' => 'mysql:host=18.231.65.102;dbname=abio',
             'username' => 'root',
             'password' => 'lQKnvJCFXj9d',
             'charset' => 'utf8',

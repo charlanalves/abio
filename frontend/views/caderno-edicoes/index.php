@@ -105,7 +105,11 @@ $this->title = '';
         gridJournal.init();
         gridJournal.recarregaGrid = function() {
             gridJournal.clearAll();
-            gridJournal.load('index.php?r=caderno-edicoes/grid-journal');
+           // gridJournal.loadXML('index.php?r=caderno-edicoes/grid-journal');
+            dhtmlxAjax.post('index.php?r=caderno-edicoes/grid-journal', {}, function (a){    
+                console.log(a.xmlDoc.response)
+                         gridJournal.loadXMLString(a.xmlDoc.response);
+                    });
         }
         gridJournal.recarregaGrid();
         

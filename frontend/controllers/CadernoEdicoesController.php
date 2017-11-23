@@ -78,8 +78,8 @@ class CadernoEdicoesController extends SiteController
                 ->where('deleted_date IS NULL')
                 ->andWhere('company.id_company = '.$idCompany)
                 ->all();
-        
-        foreach ($data as $value) {
+
+     foreach ($data as $value) {
             $i = 0;
             $row = $xml->addChild('row');
             foreach ($value as $k => $v) {
@@ -92,6 +92,7 @@ class CadernoEdicoesController extends SiteController
         }
         
         echo $xml->asXML(); 
+       die;
         
         //return $this->renderPartial('@app/views/default/xmlMask', array("xml" => $xml));
     }

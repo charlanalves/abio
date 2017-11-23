@@ -5,5 +5,8 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'xml' => [
+            'class' => 'common\components\dataDumpComponent',
+        ],
     ],
 ];
