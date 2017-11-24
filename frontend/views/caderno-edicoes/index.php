@@ -102,17 +102,10 @@ $this->title = '';
         gridJournal.setInitWidths("100,*,100");        
         gridJournal.setColAlign("center,left,center");
         gridJournal.setColTypes("ro,ro,img");
-        gridJournal.init();
-
-            //gridJournal.clearAll();
-//            gridJournal.load('index.php?r=caderno-edicoes/grid-journal');
-                alert('a')
-            dhtmlxAjax.post('index.php?r=caderno-edicoes/grid-journal', {}, function (a){      
-                alert('a')
-                console.log(a);
-                         gridJournal.loadXMLString(a.xmlDoc.response.replace('<head/>',''));
-            });
-     
+        gridJournal.init();               
+        dhtmlxAjax.post('index.php?r=caderno-edicoes/grid-journal', {}, function (a){      
+               gridJournal.loadXMLString(a.xmlDoc.response.replace('<head/>',''));
+        });
         
         W.uploadCaderno.init();
     });
