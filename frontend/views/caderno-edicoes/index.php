@@ -109,7 +109,7 @@ $this->title = '';
                 alert('a')
             dhtmlxAjax.post('index.php?r=caderno-edicoes/grid-journal', {}, function (a){      
                 alert('a')
-                console.log(a.xmlDoc.response);
+                console.log(a);
                          gridJournal.loadXMLString(a.xmlDoc.response.replace('<head/>',''));
             });
      
