@@ -103,15 +103,16 @@ $this->title = '';
         gridJournal.setColAlign("center,left,center");
         gridJournal.setColTypes("ro,ro,img");
         gridJournal.init();
-        gridJournal.recarregaGrid = function() {
+
             //gridJournal.clearAll();
 //            gridJournal.load('index.php?r=caderno-edicoes/grid-journal');
-            dhtmlxAjax.post('index.php?r=caderno-edicoes/grid-journal', {}, function (a){         
+                alert('a')
+            dhtmlxAjax.post('index.php?r=caderno-edicoes/grid-journal', {}, function (a){      
+                alert('a')
                 console.log(a.xmlDoc.response);
                          gridJournal.loadXMLString(a.xmlDoc.response);
             });
-        }
-        gridJournal.recarregaGrid();
+     
         
         W.uploadCaderno.init();
     });
