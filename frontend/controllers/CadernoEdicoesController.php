@@ -66,9 +66,9 @@ class CadernoEdicoesController extends SiteController
     public function actionGridJournal()
     {
         $idCompany = Yii::$app->user->identity->company->id_company;
-        Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
-        $headers = Yii::$app->response->headers;
-        $headers->add('Content-type', 'text/xml');
+        Yii::$app->response->format = \yii\web\Response::FORMAT_XML;
+        
+        
         
         $xml = new \SimpleXMLElement('<rows></rows>');
         $data = Journal::find()
@@ -91,8 +91,9 @@ class CadernoEdicoesController extends SiteController
             $row->addChild('cell', '../../vendor/dhtmlx/imgs/default/close.png^Excluir Jornal^javascript:deleteJournal('.$id_journal.')^_self');
         }
         
-        echo $xml->asXML(); 
+       echo $xml->asXML(); 
        die;
+       
         
         //return $this->renderPartial('@app/views/default/xmlMask', array("xml" => $xml));
     }
