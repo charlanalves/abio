@@ -51,6 +51,7 @@ $this->title = '';
         W.uploadCaderno.close();
         W.uploadCaderno.window.attachEvent("onClose", function(win){
             W.uploadCaderno.close();
+             gridJournal.recarregaGrid();
         });
     };
     W.uploadCaderno.close = function() {
