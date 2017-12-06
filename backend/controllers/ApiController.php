@@ -244,16 +244,15 @@ class ApiController extends ActiveController
         header("Access-Control-Allow-Origin: *");
         
         $query = new \yii\db\Query(); 
-        
+           // ->andWhere('journal_session.processing_date <> "0000-00-00 00:00:00" ')
         $query->select(["DATE_FORMAT(journal.publish_date, '%d/%M/%Y') AS publishDate","session.name as sessionName", "CONCAT(journal_session.path, journal_session.file_name) as fullPath"])
               ->from('journal')
               ->join('JOIN', 'journal_session', 'journal_session.id_journal = journal.id_journal')
               ->join('JOIN', 'session', 'session.id_session = journal_session.id_session')
-              ->where('journal.deleted_date is null')
-             // ->andWhere('journal_session.processing_date <> "0000-00-00 00:00:00" ')
+              ->where('journal.deleted_date is null')           
               ->orderBy('journal.publish_date DESC')
               ->limit('7');
-        
+       
                 return new ActiveDataProvider([
             'query' => $query,
         ]);
