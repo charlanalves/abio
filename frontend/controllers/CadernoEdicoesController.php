@@ -84,7 +84,7 @@ class CadernoEdicoesController extends SiteController
               CASE
                    WHEN journal_session.processing_date is null THEN 'Não Processado'
                    ELSE 'Disponível no App'
-              END as Status
+              END as status
             FROM journal
              JOIN journal_session on  journal_session.id_journal = journal.id_journal
              JOIN session  on session.id_session = journal_session.id_session
@@ -98,7 +98,7 @@ class CadernoEdicoesController extends SiteController
             $i = 0;
             $row = $xml->addChild('row');
             foreach ($value as $k => $v) {
-                if(in_array($k,['publish_date', 'id_journal'])){
+                if(in_array($k,['publish_date', 'id_journal','status'])){
                     $id_journal = $value['id_journal'];
                     $row->addChild('cell', $v);
                 }
