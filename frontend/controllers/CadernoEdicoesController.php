@@ -76,8 +76,9 @@ class CadernoEdicoesController extends SiteController
 //                ->andWhere('company.id_company = '.$idCompany)
 //                ->all();
         
-        $data = Journal::findBySql("
-              SELECT 
+        
+        $data = \Yii::$app->db->createCommand("
+             SELECT 
               journal.id_journal,
               journal.journal_number,
               DATE_FORMAT(journal.publish_date, '%d/%m/%Y') as publish_date,
@@ -89,11 +90,11 @@ class CadernoEdicoesController extends SiteController
              JOIN journal_session on  journal_session.id_journal = journal.id_journal
              JOIN session  on session.id_session = journal_session.id_session
              JOIN company_sessions on company_sessions.id_session = session.id_session
-            WHERE company_sessions.id_company =1
+            WHERE company_sessions.id_company =:idCompany
             AND deleted_date IS NULL
-            ORDER BY STATUS
-        ",[':idCompany' => $idCompany])->all();
-
+            ORDER BY publish_date
+        ")->bindValue(':idCompany', $idCompany)->queryAll();
+      
      foreach ($data as $value) {
             $i = 0;
             $row = $xml->addChild('row');
@@ -106,9 +107,8 @@ class CadernoEdicoesController extends SiteController
             $row->addChild('cell', '../../vendor/dhtmlx/imgs/default/close.png^Excluir Jornal^javascript:deleteJournal('.$id_journal.')^_self');
         }
         
-        echo $xml->asXML(); 
+       echo $xml->asXML(); 
        die;
-        
         //return $this->renderPartial('@app/views/default/xmlMask', array("xml" => $xml));
     }
     
