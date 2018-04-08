@@ -77,10 +77,10 @@ class CadernoEdicoesController extends SiteController
 //                ->all();
         
         $journal = Journal::findBySql("
-            SELECT 
-              id_journal,
-              journal_number,
-              DATE_FORMAT(publish_date, \'%d/%m/%Y\') as publish_date,
+              SELECT 
+              journal.id_journal,
+              journal.journal_number,
+              DATE_FORMAT(journal.publish_date, '%d/%m/%Y') as publish_date,
               CASE
                    WHEN journal_session.processing_date is null THEN 'Não Processado'
                    ELSE 'Disponível no App'
@@ -89,7 +89,7 @@ class CadernoEdicoesController extends SiteController
              JOIN journal_session on  journal_session.id_journal = journal.id_journal
              JOIN session  on session.id_session = journal_session.id_session
              JOIN company_sessions on company_sessions.id_session = session.id_session
-            WHERE company_sessions.id_company =:idCompany
+            WHERE company_sessions.id_company =1
             AND deleted_date IS NULL
             ORDER BY STATUS
         ",[':idCompany' => $idCompany])->all();
