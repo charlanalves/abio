@@ -243,13 +243,18 @@ class ApiController extends ActiveController
     {   
         header("Access-Control-Allow-Origin: *");
         
+        $idImprensa = Yii::$app->request->get('idImprensa');
+        
         $query = new \yii\db\Query(); 
            // ->andWhere('journal_session.processing_date <> "0000-00-00 00:00:00" ')
         $query->select(["DATE_FORMAT(journal.publish_date, '%d/%M/%Y') AS publishDate","session.name as sessionName", "CONCAT(journal_session.path, journal_session.file_name) as fullPath"])
               ->from('journal')
               ->join('JOIN', 'journal_session', 'journal_session.id_journal = journal.id_journal')
               ->join('JOIN', 'session', 'session.id_session = journal_session.id_session')
-              ->where('journal.deleted_date is null')           
+              ->join('JOIN', 'company_sessions', 'company_sessions.id_session = session.id_session')
+              ->where('journal.deleted_date is null')    
+              ->andWhere('company_sessions.id_company =:idImprensa')
+              ->addParams([':idImprensa' => $idImprensa])
               ->orderBy('journal.publish_date DESC')
               ->limit('7');
        
@@ -264,6 +269,7 @@ class ApiController extends ActiveController
         header("Access-Control-Allow-Origin: *");
         
          $dateGet = Yii::$app->request->get('date');
+         $idImprensa = Yii::$app->request->get('idImprensa');
         
         if ( empty($dateGet) ) {
             return false;
@@ -277,9 +283,12 @@ class ApiController extends ActiveController
               ->from('journal')
               ->join('JOIN', 'journal_session', 'journal_session.id_journal = journal.id_journal')
               ->join('JOIN', 'session', 'session.id_session = journal_session.id_session')
+              ->join('JOIN', 'company_sessions', 'company_sessions.id_session = session.id_session')                
               ->where(['journal.publish_date' => $date])  
               ->andWhere('journal.deleted_date is null')
               ->andWhere('journal_session.processing_date <> "0000-00-00 00:00:00" ')
+              ->andWhere('company_sessions.id_company =:idImprensa')
+              ->addParams([':idImprensa' => $idImprensa])
               ->orderBy('journal.publish_date DESC')
               ->limit('7');
         

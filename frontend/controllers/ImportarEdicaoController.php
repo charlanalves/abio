@@ -33,15 +33,17 @@ class ImportarEdicaoController extends Controller
      */
     public function actionProcessaPdf()
     {
-           
+  
         $this->enableCsrfValidation = false;
         $pdfPendente = $this->listaPdfPendente();
+		
+	
         // loop nos registro do banco se existir
         if($pdfPendente['pdfDb']){
             foreach ($pdfPendente['pdfDb'] as $journal) {
 
                 // verifica se pdf não existe
-                $pathCompleto = 'uploads/unprocessed/' . $journal->file_name;
+                $pathCompleto = __DIR__.'/../web/uploads/unprocessed/' . $journal->file_name;
                 if(!is_file($pathCompleto)){
                     $this->logErro(['message'=>'O PDF (' . $pathCompleto . ') não foi encontrado.']);
                     continue;
@@ -51,6 +53,7 @@ class ImportarEdicaoController extends Controller
                     
                     // le pdf
                     $textPDF = $this->lerPdf($pathCompleto);
+				
                     
                     if(is_array($textPDF)){
 
@@ -81,6 +84,7 @@ class ImportarEdicaoController extends Controller
         $subQuery = Journal::find()
                 ->select('id_journal')
                 ->where(['deleted_date' => null]);
+				
         
         $pdfDb = Journal_session::find()
                 ->where(['IN', 'id_journal', $subQuery])
@@ -99,16 +103,13 @@ class ImportarEdicaoController extends Controller
      */
     private function lerPdf($path)
     {
-        
         try {
-            
+           
             $totalPages = [];
             $text = '';
-
-            // Monta o caminho absoluto do arquivo
-            $path = '/var/www/html/abio/frontend/web/'.$path;
-            //------------------------------------------------------------------
+     //------------------------------------------------------------------
             
+			
             if (preg_match('/\s/',$path)) {
                 $path = preg_replace('/\s/','\\ ',$path);
                 $path = preg_replace('/\(/','\\(',$path);
