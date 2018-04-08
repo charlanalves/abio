@@ -101,7 +101,7 @@ $this->title = '';
         gridJournal.setHeader("Código do Jornal,Data,Status,Excluir");
         gridJournal.attachHeader(",#text_filter,#text_filter,");
         gridJournal.setInitWidths("100,*,*,100");        
-        gridJournal.setColAlign("center,left,center,center");
+        gridJournal.setColAlign("center,center,center,center");
         gridJournal.setColTypes("ro,ro,ro,img");
         gridJournal.init();    
         gridJournal.recarregaGrid = function(){
