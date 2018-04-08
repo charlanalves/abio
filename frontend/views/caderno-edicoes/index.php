@@ -98,11 +98,11 @@ $this->title = '';
 	window.testeLayout.cells("a").setText('Jornais cadastrados');
 			
 	gridJournal = window.testeLayout.cells("a").attachGrid();
-        gridJournal.setHeader("Código do Jornal,Data,Excluir");
-        gridJournal.attachHeader(",#text_filter,");
-        gridJournal.setInitWidths("100,*,100");        
-        gridJournal.setColAlign("center,left,center");
-        gridJournal.setColTypes("ro,ro,img");
+        gridJournal.setHeader("Código do Jornal,Data,Status,Excluir");
+        gridJournal.attachHeader(",#text_filter,text_filter,");
+        gridJournal.setInitWidths("100,*,*,100");        
+        gridJournal.setColAlign("center,left,center,center");
+        gridJournal.setColTypes("ro,ro,ro,img");
         gridJournal.init();    
         gridJournal.recarregaGrid = function(){
             dhtmlxAjax.post('index.php?r=caderno-edicoes/grid-journal', {}, function (a){      

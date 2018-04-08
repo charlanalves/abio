@@ -68,13 +68,31 @@ class CadernoEdicoesController extends SiteController
         $idCompany = Yii::$app->user->identity->company->id_company;
         
         $xml = new \SimpleXMLElement('<rows></rows>');
-        $data = Journal::find()
-                ->select(['id_journal','journal_number','DATE_FORMAT(publish_date, \'%d/%m/%Y\') as publish_date'])
-                ->join('join', 'user', 'journal.id_user = user.id')
-                ->join('join', 'company', 'user.id_company = company.id_company')                                
-                ->where('deleted_date IS NULL')
-                ->andWhere('company.id_company = '.$idCompany)
-                ->all();
+//        $data = Journal::find()
+//                ->select(['id_journal','journal_number','DATE_FORMAT(publish_date, \'%d/%m/%Y\') as publish_date'])
+//                ->join('join', 'user', 'journal.id_user = user.id')
+//                ->join('join', 'company', 'user.id_company = company.id_company')                                
+//                ->where('deleted_date IS NULL')
+//                ->andWhere('company.id_company = '.$idCompany)
+//                ->all();
+        
+        $journal = Journal::findBySql("
+            SELECT 
+              id_journal,
+              journal_number,
+              DATE_FORMAT(publish_date, \'%d/%m/%Y\') as publish_date
+              CASE
+                   WHEN journal_session.processing_date is null THEN 'Não Processado'
+                   ELSE 'Disponível no App'
+              END as Status
+            FROM journal
+             JOIN journal_session on  journal_session.id_journal = journal.id_journal
+             JOIN session  on session.id_session = journal_session.id_session
+             JOIN company_sessions on company_sessions.id_session = session.id_session
+            WHERE company_sessions.id_company =:idCompany
+            AND deleted_date IS NULL
+            ORDER BY STATUS
+        ",[':idCompany' => $idCompany])->all();
 
      foreach ($data as $value) {
             $i = 0;
