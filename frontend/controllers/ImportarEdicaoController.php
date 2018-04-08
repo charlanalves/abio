@@ -41,16 +41,17 @@ class ImportarEdicaoController extends Controller
         // loop nos registro do banco se existir
         if($pdfPendente['pdfDb']){
             foreach ($pdfPendente['pdfDb'] as $journal) {
-
                 // verifica se pdf não existe
                 $pathCompleto = __DIR__.'/../web/uploads/unprocessed/' . $journal->file_name;
                 if(!is_file($pathCompleto)){
+                       echo "erro no arquivo $pathCompleto<br>";
                     $this->logErro(['message'=>'O PDF (' . $pathCompleto . ') não foi encontrado.']);
                     continue;
                 }
 
                 try {
                     
+                echo "processando $pathCompleto<br>";
                     // le pdf
                     $textPDF = $this->lerPdf($pathCompleto);
 				
@@ -84,8 +85,8 @@ class ImportarEdicaoController extends Controller
         $subQuery = Journal::find()
                 ->select('journal.id_journal')
                 ->join('JOIN', 'journal_session', 'journal_session.id_journal = journal.id_journal')
-                ->where(['journal.deleted_date is null'])
-                ->andWhere(['journal_session.processing_date is null']);
+                ->where(['journal.deleted_date' => null])
+                ->andWhere(['journal_session.processing_date' => null]);
 				
         
         $pdfDb = Journal_session::find()
