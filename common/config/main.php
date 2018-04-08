@@ -8,5 +8,8 @@ return [
         'xml' => [
             'class' => 'common\components\dataDumpComponent',
         ],
+        'file' => [
+            'class' => 'common\components\FileComponent',
+        ],
     ],
 ];
