@@ -40,3 +40,4 @@ frontend/controllers/CadernoEdicoesController.php
 frontend/runtime/debug/index.data
 frontend/runtime/logs/app.log
 /vendor/
+frontend/web/uploads/
