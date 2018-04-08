@@ -3,8 +3,8 @@
 namespace common\components;
 
 use Yii;
+use yii\base\Component;
 use yii\filters\AccessControl;
-use yii\web\Controller;
 use frontend\models\Journal;
 use frontend\models\Journal_session;
 use frontend\models\Journal_pages;
