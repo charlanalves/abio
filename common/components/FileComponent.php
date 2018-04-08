@@ -46,7 +46,7 @@ class FileComponent extends Component
         if($pdfPendente['pdfDb']){
             foreach ($pdfPendente['pdfDb'] as $journal) {
                 // verifica se pdf não existe
-                $pathCompleto = __DIR__.'/../web/uploads/unprocessed/' . $journal->file_name;
+                $pathCompleto = __DIR__.'/../../frontend/web/uploads/unprocessed/' . $journal->file_name;
                 if(!is_file($pathCompleto)){
                        echo "erro no arquivo $pathCompleto<br>";
                     $this->logErro(['message'=>'O PDF (' . $pathCompleto . ') não foi encontrado.']);
