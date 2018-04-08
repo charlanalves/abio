@@ -222,7 +222,7 @@ class CadernoEdicoesController extends SiteController
             
             $transaction->commit();
             
-            \Yii::$app->runAction('actionProcessaPdf/ProcessaPdf');
+            \Yii::$app->file->processaPdf();
 
         } catch (\Exception $e) {
             $transaction->rollBack();

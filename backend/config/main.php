@@ -16,6 +16,9 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
+        'file' => [
+            'class' => 'common\components\FileComponent',
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

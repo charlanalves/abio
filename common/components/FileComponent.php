@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers;
+namespace common\components;
 
 use Yii;
 use yii\filters\AccessControl;
@@ -11,7 +11,18 @@ use frontend\models\Journal_pages;
 use frontend\models\Log;
 use frontend\libs\PDF2Text;
 
-class ImportarEdicaoController extends Controller
+/**
+* dataDumpComponent
+* Classe responsavel por retornar xml
+*
+* @access Public
+* @author Charlan Santos
+* @package Component
+* @since  05/2016
+* @example 
+*
+**/
+class FileComponent extends Component
 {
     private $emailOrigem = "charlan.job@gmail.com";
     private $emailDestino = "charlan.job@gmail.com";
@@ -21,19 +32,53 @@ class ImportarEdicaoController extends Controller
     
     private $typeLog = 1; // importacao de edicao
     
+ 
     /**
      * @inheritdoc
      */
-    public function actionTeste()
+    public function processaPdf()
     {
-         $this->logErro(['message'=>'teste']);
-    }
-    /**
-     * @inheritdoc
-     */
-    public function actionProcessaPdf()
-    {
-      \Yii::$app->file->processaPdf();
+  
+        $this->enableCsrfValidation = false;
+        $pdfPendente = $this->listaPdfPendente();
+		
+	
+        // loop nos registro do banco se existir
+        if($pdfPendente['pdfDb']){
+            foreach ($pdfPendente['pdfDb'] as $journal) {
+                // verifica se pdf não existe
+                $pathCompleto = __DIR__.'/../web/uploads/unprocessed/' . $journal->file_name;
+                if(!is_file($pathCompleto)){
+                       echo "erro no arquivo $pathCompleto<br>";
+                    $this->logErro(['message'=>'O PDF (' . $pathCompleto . ') não foi encontrado.']);
+                    continue;
+                }
+
+                try {
+                    
+                echo "processando $pathCompleto<br>";
+                    // le pdf
+                    $textPDF = $this->lerPdf($pathCompleto);
+				
+                    
+                    if(is_array($textPDF)){
+
+                        // salva pdf no banco e move o arquivo
+                        $this->salvaMovePdf([
+                            'id_journal_session'=>$journal->id_journal_session,
+                            'id_journal'=>$journal->id_journal,
+                            'content'=>$textPDF,
+                            'path'=>$journal->path,
+                            'file_name'=>$journal->file_name,
+                            ]);
+                        
+                    }
+                    
+                } catch (\Exception $e) {
+                    continue;
+                }
+            }
+        }
     }
     
     /**
@@ -252,5 +297,6 @@ class ImportarEdicaoController extends Controller
         ->setTextBody($this->emailCorpo)
         ->send();
     }
-    
+   
 }
+
