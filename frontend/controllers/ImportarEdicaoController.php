@@ -82,13 +82,14 @@ class ImportarEdicaoController extends Controller
     {
         // busca pdf pendente no banco (sem data de processamento)
         $subQuery = Journal::find()
-                ->select('id_journal')
-                ->where(['deleted_date' => null]);
+                ->select('journal.id_journal')
+                ->join('JOIN', 'journal_session', 'journal_session.id_journal = journal.id_journal')
+                ->where(['journal.deleted_date is null'])
+                ->andWhere(['journal_session.processing_date is null']);
 				
         
         $pdfDb = Journal_session::find()
-                ->where(['IN', 'id_journal', $subQuery])
-                ->andWhere(['processing_date' => null])
+                ->where(['IN', 'id_journal', $subQuery])               
                 ->all();
         
         // busca pdf pendente na pasta

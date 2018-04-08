@@ -246,7 +246,6 @@ class ApiController extends ActiveController
         $idImprensa = Yii::$app->request->get('idImprensa');
         
         $query = new \yii\db\Query(); 
-           // ->andWhere('journal_session.processing_date <> "0000-00-00 00:00:00" ')
         $query->select(["DATE_FORMAT(journal.publish_date, '%d/%M/%Y') AS publishDate","session.name as sessionName", "CONCAT(journal_session.path, journal_session.file_name) as fullPath"])
               ->from('journal')
               ->join('JOIN', 'journal_session', 'journal_session.id_journal = journal.id_journal')
@@ -254,6 +253,7 @@ class ApiController extends ActiveController
               ->join('JOIN', 'company_sessions', 'company_sessions.id_session = session.id_session')
               ->where('journal.deleted_date is null')    
               ->andWhere('company_sessions.id_company =:idImprensa')
+              ->andWhere('journal_session.processing_date is not null')
               ->addParams([':idImprensa' => $idImprensa])
               ->orderBy('journal.publish_date DESC')
               ->limit('7');
@@ -286,7 +286,7 @@ class ApiController extends ActiveController
               ->join('JOIN', 'company_sessions', 'company_sessions.id_session = session.id_session')                
               ->where(['journal.publish_date' => $date])  
               ->andWhere('journal.deleted_date is null')
-              ->andWhere('journal_session.processing_date <> "0000-00-00 00:00:00" ')
+              ->andWhere('journal.processing_date is not null')
               ->andWhere('company_sessions.id_company =:idImprensa')
               ->addParams([':idImprensa' => $idImprensa])
               ->orderBy('journal.publish_date DESC')
