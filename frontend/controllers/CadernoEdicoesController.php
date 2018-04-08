@@ -80,7 +80,7 @@ class CadernoEdicoesController extends SiteController
             SELECT 
               id_journal,
               journal_number,
-              DATE_FORMAT(publish_date, \'%d/%m/%Y\') as publish_date
+              DATE_FORMAT(publish_date, \'%d/%m/%Y\') as publish_date,
               CASE
                    WHEN journal_session.processing_date is null THEN 'Não Processado'
                    ELSE 'Disponível no App'
