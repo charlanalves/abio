@@ -99,7 +99,7 @@ $this->title = '';
 			
 	gridJournal = window.testeLayout.cells("a").attachGrid();
         gridJournal.setHeader("Código do Jornal,Data,Status,Excluir");
-        gridJournal.attachHeader(",#text_filter,#text_filter,");
+        gridJournal.attachHeader(",#text_filter,#select_filter,");
         gridJournal.setInitWidths("100,*,*,100");        
         gridJournal.setColAlign("center,center,center,center");
         gridJournal.setColTypes("ro,ro,ro,img");
