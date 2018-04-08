@@ -76,7 +76,7 @@ class CadernoEdicoesController extends SiteController
 //                ->andWhere('company.id_company = '.$idCompany)
 //                ->all();
         
-        $journal = Journal::findBySql("
+        $data = Journal::findBySql("
               SELECT 
               journal.id_journal,
               journal.journal_number,
