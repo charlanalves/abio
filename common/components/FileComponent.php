@@ -39,7 +39,6 @@ class FileComponent extends Component
     public function processaPdf()
     {
   
-        $this->enableCsrfValidation = false;
         $pdfPendente = $this->listaPdfPendente();
 		
 	
