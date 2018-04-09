@@ -32,22 +32,6 @@ class ApiController extends ActiveController
         ];
     }
   
-  while true ; do  & sleep 5; done
-  
-* * * * * curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 5 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 10 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 15 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 20 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 25 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 30 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 35 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 40 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 45 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 50 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 55 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-* * * * * sleep 60 && curl http://www.appimprensa.com.br/frontend/web/index.php?r=importar-edicao/processa-pdf) &
-
  public function behaviors()
   {
       return ArrayHelper::merge(parent::behaviors(), [
