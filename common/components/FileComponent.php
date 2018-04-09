@@ -221,8 +221,7 @@ class FileComponent extends Component
         if(!rename($origem, $destino)){
             throw new Exception('Erro ao tentar mover o PDF (' . $origem . ' para ' . $destino . ').');
         }
-        
-        exec('cd '.$destino.' && chown www-data:bitnami', $out);
+        chown($destino, 'bitnami');       
 
         return true;
     }
