@@ -239,10 +239,10 @@ class FileComponent extends Component
         foreach ($pastas as $pasta) {
             $dir .= $pasta.'/';
             if(!is_dir($dir)){
-                if(!mkdir($dir, 0755)){
+                if(!mkdir($dir, 0777)){
                     return false;
                 } else {
-                    chmod($dir, 0755);
+                    chmod($dir, 0777);
                 }
             }
         }
