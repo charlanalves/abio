@@ -218,8 +218,7 @@ class CadernoEdicoesController extends SiteController
             // salva id do jornal na sessao
             Yii::$app->session->set('id_journal', $this->id_journal);
             
-             $transaction->commit();
-             \Yii::$app->runAction('importar-edicao/processa-pdf');
+             $transaction->commit();         
                 
         } catch (\Exception $e) {
             $transaction->rollBack();
