@@ -33,7 +33,47 @@ class ImportarEdicaoController extends Controller
      */
     public function actionProcessaPdf()
     {
-      \Yii::$app->file->processaPdf();
+  
+        $this->enableCsrfValidation = false;
+        $pdfPendente = $this->listaPdfPendente();
+		
+	
+        // loop nos registro do banco se existir
+        if($pdfPendente['pdfDb']){
+            foreach ($pdfPendente['pdfDb'] as $journal) {
+                // verifica se pdf não existe
+                $pathCompleto = __DIR__.'/../web/uploads/unprocessed/' . $journal->file_name;
+                if(!is_file($pathCompleto)){
+                       echo "erro no arquivo $pathCompleto<br>";
+                    $this->logErro(['message'=>'O PDF (' . $pathCompleto . ') não foi encontrado.']);
+                    continue;
+                }
+
+                try {
+                    
+                echo "processando $pathCompleto<br>";
+                    // le pdf
+                    $textPDF = $this->lerPdf($pathCompleto);
+				
+                    
+                    if(is_array($textPDF)){
+
+                        // salva pdf no banco e move o arquivo
+                        $this->salvaMovePdf([
+                            'id_journal_session'=>$journal->id_journal_session,
+                            'id_journal'=>$journal->id_journal,
+                            'content'=>$textPDF,
+                            'path'=>$journal->path,
+                            'file_name'=>$journal->file_name,
+                            ]);
+                        
+                    }
+                    
+                } catch (\Exception $e) {
+                    continue;
+                }
+            }
+        }
     }
     
     /**
