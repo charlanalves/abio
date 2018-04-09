@@ -33,7 +33,7 @@ class CadernoEdicoesController extends SiteController
                 'rules' => [
                     // Coloque aqui as actions que deseja liberar para usuarios visitantes 
                     [
-                        'actions' => ['login', 'error','request'],
+                        'actions' => ['login', 'error','request','processa-caderno'],
                         'allow' => true,
                     ],
                     // Coloque aqui as actions que deseja liberar para usuarios logados acessarem diretamente
@@ -129,8 +129,7 @@ class CadernoEdicoesController extends SiteController
      * @inheritdoc
      */
     public function actionDataJournal()
-    {   
-        
+    {           
         Yii::$app->session->set('id_journal', null);
         $idCompany = Yii::$app->user->identity->company->id_company;        
         
@@ -193,7 +192,6 @@ class CadernoEdicoesController extends SiteController
      */
     public function actionProcessaCaderno()
     {
-        
         $post = Yii::$app->request;
         $this->tp_caderno = $post->post('tp');
         $this->file_name = $file = $post->post('file');
@@ -220,10 +218,9 @@ class CadernoEdicoesController extends SiteController
             // salva id do jornal na sessao
             Yii::$app->session->set('id_journal', $this->id_journal);
             
-            $transaction->commit();
-            
-            \Yii::$app->file->processaPdf();
-
+             $transaction->commit();
+             \Yii::$app->runAction('importar-edicao/processa-pdf');
+                
         } catch (\Exception $e) {
             $transaction->rollBack();
             $this->excluiPDF($origem);

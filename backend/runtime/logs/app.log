@@ -6443,3 +6443,1031 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1508803058.765
     'REQUEST_TIME' => 1508803058
 ]
+2018-04-09 02:23:59 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "ImportarEdicao/ProcessaPdf".' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ApiController.php(304): yii\base\Module->runAction('ImportarEdicao/...')
+#1 [internal function]: backend\controllers\ApiController->actionFn()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('fn', Array)
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-04-09 02:23:59 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '63477'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233439.223
+    'REQUEST_TIME' => 1523233439
+]
+2018-04-09 02:24:15 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "Importar-edicao/processa-pdf".' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ApiController.php(304): yii\base\Module->runAction('Importar-edicao...')
+#1 [internal function]: backend\controllers\ApiController->actionFn()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('fn', Array)
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-04-09 02:24:15 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '63516'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233455.396
+    'REQUEST_TIME' => 1523233455
+]
+2018-04-09 02:24:26 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "importar-edicao/processa-pdf".' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ApiController.php(304): yii\base\Module->runAction('importar-edicao...')
+#1 [internal function]: backend\controllers\ApiController->actionFn()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('fn', Array)
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-04-09 02:24:25 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '63552'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233465.973
+    'REQUEST_TIME' => 1523233465
+]
+2018-04-09 02:24:40 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "importarEdicao/processa-pdf".' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ApiController.php(304): yii\base\Module->runAction('importarEdicao/...')
+#1 [internal function]: backend\controllers\ApiController->actionFn()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('fn', Array)
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-04-09 02:24:40 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '63581'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233480.013
+    'REQUEST_TIME' => 1523233480
+]
+2018-04-09 02:25:01 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "importarEdicao/actionProcessaPdf".' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ApiController.php(304): yii\base\Module->runAction('importarEdicao/...')
+#1 [internal function]: backend\controllers\ApiController->actionFn()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('fn', Array)
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-04-09 02:25:01 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '63616'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233501.135
+    'REQUEST_TIME' => 1523233501
+]
+2018-04-09 02:26:31 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\ErrorHandler::errors' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 xdebug://debug-eval(1): yii\base\Component->__get('errors')
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\ErrorHandler.php(89): yii\base\ErrorHandler::handleException()
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownPropertyException))
+#3 {main}
+  thrown' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 {main}
+2018-04-09 02:26:19 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '63765'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233579.721
+    'REQUEST_TIME' => 1523233579
+]
+2018-04-09 02:29:27 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\Application::errors' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\di\ServiceLocator.php(73): yii\base\Component->__get('errors')
+#1 xdebug://debug-eval(1): yii\di\ServiceLocator->__get('errors')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->runAction()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2018-04-09 02:29:07 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '64083'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233747.798
+    'REQUEST_TIME' => 1523233747
+]
+2018-04-09 02:29:32 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\Application::errors' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\di\ServiceLocator.php(73): yii\base\Component->__get('errors')
+#1 xdebug://debug-eval(1): yii\di\ServiceLocator->__get('errors')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->runAction()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('debug/default/t...', Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2018-04-09 02:29:28 [::1][-][-][info][application] $_GET = [
+    'r' => 'debug/default/toolbar'
+    'tag' => '5acab3d3eb21c'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/abioback/backend/web/index.php?r=api/fn'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '64134'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=debug%2Fdefault%2Ftoolbar&tag=5acab3d3eb21c'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=debug%2Fdefault%2Ftoolbar&tag=5acab3d3eb21c'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233767.904
+    'REQUEST_TIME' => 1523233767
+]
+2018-04-09 02:29:45 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "importarEdicao/actionProcessaPdf".' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ApiController.php(304): yii\base\Module->runAction('importarEdicao/...')
+#1 [internal function]: backend\controllers\ApiController->actionFn()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('fn', Array)
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2018-04-09 02:29:45 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '64176'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233785.142
+    'REQUEST_TIME' => 1523233785
+]
+2018-04-09 02:30:07 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\Application::errors' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\di\ServiceLocator.php(73): yii\base\Component->__get('errors')
+#1 xdebug://debug-eval(1): yii\di\ServiceLocator->__get('errors')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module::runAction()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2018-04-09 02:30:04 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '64211'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233804.056
+    'REQUEST_TIME' => 1523233804
+]
+2018-04-09 02:30:11 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\Application::errors' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\di\ServiceLocator.php(73): yii\base\Component->__get('errors')
+#1 xdebug://debug-eval(1): yii\di\ServiceLocator->__get('errors')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module::runAction()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('debug/default/t...', Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2018-04-09 02:30:08 [::1][-][-][info][application] $_GET = [
+    'r' => 'debug/default/toolbar'
+    'tag' => '5acab40c4bee0'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/abioback/backend/web/index.php?r=api/fn'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '64212'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=debug%2Fdefault%2Ftoolbar&tag=5acab40c4bee0'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=debug%2Fdefault%2Ftoolbar&tag=5acab40c4bee0'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233808.103
+    'REQUEST_TIME' => 1523233808
+]
+2018-04-09 02:32:50 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\Application::errors' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\di\ServiceLocator.php(73): yii\base\Component->__get('errors')
+#1 xdebug://debug-eval(1): yii\di\ServiceLocator->__get('errors')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module::runAction()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('api/fn', Array)
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2018-04-09 02:32:47 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '64453'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233967.146
+    'REQUEST_TIME' => 1523233967
+]
+2018-04-09 02:32:52 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\controllers\frontend\controllers\ImportarEdicaoController' not found' in C:\xampp\htdocs\abioback\backend\controllers\ApiController.php:304
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php:55}('', '')
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', '')
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('', '')
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest('')
+#5 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2018-04-09 02:32:52 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '64454'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233972.676
+    'REQUEST_TIME' => 1523233972
+]
+2018-04-09 02:33:09 [::1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Missing argument 1 for yii\base\Controller::__construct(), called in C:\xampp\htdocs\abioback\backend\controllers\ApiController.php on line 304 and defined' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php:80
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\ApiController->actionFn()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php:55}('', '')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('')
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', '')
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('', '')
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest('')
+#6 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2018-04-09 02:33:09 [::1][-][-][info][application] $_GET = [
+    'r' => 'api/fn'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf-frontend' => 'ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh\";}'
+    'advanced-frontend' => '33h83p6cd5si2q8d53tdt5vea7'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'XDEBUG_SESSION' => 'netbeans-xdebug'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf-frontend=ae0a1a5be82fcf1c0e8a4fd3b2013b77fe94e3d445e37b71b7a2514c4fe5bb3da%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jlnweolqDGoPlyOWbfD_xkyg9O8zp8Hh%22%3B%7D; advanced-frontend=33h83p6cd5si2q8d53tdt5vea7; _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; XDEBUG_SESSION=netbeans-xdebug'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '64493'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/fn'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=api/fn'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523233988.964
+    'REQUEST_TIME' => 1523233988
+]

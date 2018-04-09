@@ -33,7 +33,6 @@ class ImportarEdicaoController extends Controller
      */
     public function actionProcessaPdf()
     {
-  
         $this->enableCsrfValidation = false;
         $pdfPendente = $this->listaPdfPendente();
 		
