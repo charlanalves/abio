@@ -219,7 +219,7 @@ class ApiController extends ActiveController
             $model->username = $userName;
             $model->password = $password;
             $model->email = $email;
-            $model->idCompany = $idCompany;
+            $model->id_company = $idCompany;
             $model->profile = 'APP';
 
             $user = $model->signup();
