@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -34,7 +34,7 @@ class Occurrence extends \yii\db\ActiveRecord
             [['id_notification', 'id_journal_page', 'content'], 'required'],
             [['id_notification', 'id_journal_page'], 'integer'],
             [['content'], 'string', 'max' => 500],
-            [['id_journal_page'], 'exist', 'skipOnError' => true, 'targetClass' => JournalPages::className(), 'targetAttribute' => ['id_journal_page' => 'id_journal_pages']],
+            [['id_journal_page'], 'exist', 'skipOnError' => true, 'targetClass' => Journal_pages::className(), 'targetAttribute' => ['id_journal_page' => 'id_journal_pages']],
             [['id_notification'], 'exist', 'skipOnError' => true, 'targetClass' => Notification::className(), 'targetAttribute' => ['id_notification' => 'id_notification']],
         ];
     }

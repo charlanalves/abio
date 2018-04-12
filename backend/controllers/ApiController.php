@@ -134,8 +134,9 @@ class ApiController extends ActiveController
               ->asArray()
               ->all()[0];   
       
-      $jp['content'] = str_ireplace($notification, $replace, $jp['content']);
-        
+      $jp['content'] = str_ireplace($notification, $replace, $jp['content'], $count);
+      $jp['numeroOcorrencias'] = $count;
+      
       return ['status' => true, 'message' => $jp];
    
   }
