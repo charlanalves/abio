@@ -134,8 +134,16 @@ class ApiController extends ActiveController
               ->asArray()
               ->all()[0];   
       
+      $data = Journal::findBySql("
+                SELECT DATE_FORMAT(journal.publish_date, '%d/%m/%Y')
+                FROM journal
+                JOIN journal_pages on journal_pages.id_journal = journal.id_journal
+                WHERE journal_pages.id_journal_pages = :ID_JOURNAL_PAGES  
+      ",[':ID_JOURNAL_PAGES' => $id_journal_pages])->asArray()->all()[0];
+             
       $jp['content'] = str_ireplace($notification, $replace, $jp['content'], $count);
       $jp['numeroOcorrencias'] = $count;
+      $jp['dataPublicacao'] = $data;
       
       return ['status' => true, 'message' => $jp];
    
