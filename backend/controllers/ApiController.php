@@ -11,6 +11,7 @@ use common\models\SignupForm;
 use common\models\User;
 use common\models\Notification;
 use frontend\models\Journal_pages as JournalPages;
+use frontend\models\Journal as Journal;
 
 
 
