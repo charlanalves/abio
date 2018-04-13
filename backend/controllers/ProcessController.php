@@ -20,8 +20,7 @@ class ProcessController extends \yii\web\Controller
     public function actionAlerts()
     {	
         try{
-//          $today = date('Y-m-d');
-          $today = '2018-04-19';
+          $today = date('Y-m-d');          
           $notifications = Notification::find()->all();
           $pages = $this->getJournalPagesByDate($today);
           $this->findAndSaveOccurrenceAndProcess($pages, $notifications);
