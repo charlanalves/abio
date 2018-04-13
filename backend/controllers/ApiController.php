@@ -300,12 +300,12 @@ class ApiController extends ActiveController
               ->join('JOIN', 'company_sessions', 'company_sessions.id_session = session.id_session')                
               ->where(['journal.publish_date' => $date])  
               ->andWhere('journal.deleted_date is null')
-              ->andWhere('journal.processing_date is not null')
+              ->andWhere('journal_session.processing_date is not null')
               ->andWhere('company_sessions.id_company =:idImprensa')
               ->addParams([':idImprensa' => $idImprensa])
               ->orderBy('journal.publish_date DESC')
               ->limit('7');
-        
+      
          return new ActiveDataProvider([
             'query' => $query,
         ]);
