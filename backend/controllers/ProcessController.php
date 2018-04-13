@@ -20,9 +20,20 @@ class ProcessController extends \yii\web\Controller
     public function actionAlerts()
     {	
         try{
-          $today = date('Y-m-d');          
+          $today = date('Y-m-d');
+          echo "TODAY IS ---.>>>> ". $today.'<BR>'; 
           $notifications = Notification::find()->all();
+          echo "NOTIFICATIONS ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
+          print'<pre>';
+          print_r($notifications);
+          echo "--------------------------------- ---.>>>><br><br><br> "; 
           $pages = $this->getJournalPagesByDate($today);
+          
+          echo "getJournalPagesByDate ---.>>>>>>>>>>>>>>>>>>>>>>>>>>><br><br><br> "; 
+          print'<pre>';
+          print_r($pages);
+          echo "--------------------------------- ---.>>>><br><br><br> "; 
+          
           $this->findAndSaveOccurrenceAndProcess($pages, $notifications);
         } catch (Exception $e) {
             $error = $e->getMessage();
@@ -37,6 +48,11 @@ class ProcessController extends \yii\web\Controller
             foreach ($pages as $page) {
                if ($this->existOccurrence($page, $not)) {
                     $this->saveOccurrence($page, $not);
+               }else{
+                   echo "nao existe ocorencia para a page ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
+                    print'<pre>';
+                    print_r($page);
+                    echo "--------------------------------- ---.>>>><br><br><br> "; 
                }
             }
         }
@@ -77,6 +93,11 @@ class ProcessController extends \yii\web\Controller
         if (!$oc->save()){
             $errors = json_encode($oc->getErrors());
             throw new Exception($errors);
+        }else{
+             echo "OCORRENCIA SALVA ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
+                    print'<pre>';
+                    print_r($oc);
+            echo "--------------------------------- ---.>>>><br><br><br> "; 
         }
     }
     
