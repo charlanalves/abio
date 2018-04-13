@@ -149,12 +149,12 @@ class ApiController extends ActiveController
       return ['status' => true, 'message' => $jp];
    
   }
-  public function getOccurencesByNot($params)
+  public function getOccurencesByNot($id_notification)
   {
       header("Access-Control-Allow-Origin: *");
       
       $not = new Notification;
-      $not->id_notification = $params['id_notification'];
+      $not->id_notification = $id_notification;
       $n = $not->getOccurencesNot();
 
       return ['status' => true, 'message' => $n];
