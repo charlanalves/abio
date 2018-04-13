@@ -49,7 +49,7 @@ class ProcessController extends \yii\web\Controller
                if ($this->existOccurrence($page, $not)) {
                     $this->saveOccurrence($page, $not);
                }else{
-                   echo "nao existe ocorencia para a page ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
+                   echo "nao existe ocorencia para a page na not $not->name ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
                     print'<pre>';
                     print_r($page);
                     echo "--------------------------------- ---.>>>><br><br><br> "; 
@@ -94,7 +94,7 @@ class ProcessController extends \yii\web\Controller
             $errors = json_encode($oc->getErrors());
             throw new Exception($errors);
         }else{
-             echo "OCORRENCIA SALVA ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
+             echo "OCORRENCIA SALVA ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> $not->name"; 
                     print'<pre>';
                     print_r($oc);
             echo "--------------------------------- ---.>>>><br><br><br> "; 
