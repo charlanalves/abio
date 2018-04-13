@@ -149,7 +149,7 @@ class ApiController extends ActiveController
       return ['status' => true, 'message' => $jp];
    
   }
-  public function actiongetOccurencesByNot($id_notification)
+  public function actionGetOccurencesByNot($id_notification)
   {
       header("Access-Control-Allow-Origin: *");
       
