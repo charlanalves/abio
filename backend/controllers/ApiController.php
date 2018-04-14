@@ -259,13 +259,14 @@ class ApiController extends ActiveController
                 }
             }
 
-            return ['message' => $user->getAttributes()];
+             $return =  ['status'=> true,'message' => $user->getAttributes()];
+             die(json_encode($return));
         }else {
             if (!$user->validatePassword($password)) {
                 throw new \Exception('Usuário ou senha incorreta');
             }
         }
-           $return = ['status' => true, 'message' => ''];
+           $return =  ['status'=> true,'message' => $user->getAttributes()];
            die(json_encode($return));
         } catch(\Exception $e){
            $return = ['status' => true, 'message' => $e->getMessage()];
