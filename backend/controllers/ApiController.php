@@ -38,7 +38,7 @@ class ApiController extends ActiveController
       return ArrayHelper::merge(parent::behaviors(), [
           [
               'class' => 'yii\filters\ContentNegotiator',
-              'only' => ['view', 'index','centralMethod','signup'],  // in a controller
+              'only' => ['view', 'index','centralMethod','signup','deleteNotifyByUser','AddNotifyByUser'],  // in a controller
               // if in a module, use the following IDs for user actions
               // 'only' => ['user/view', 'user/index']
               'formats' => [
@@ -118,35 +118,40 @@ class ApiController extends ActiveController
       return ['status' => true, 'message' => $nots];
    
   }
-  public function getJournalById($params)
+  public function actionGetJournalById()
  {
-      header("Access-Control-Allow-Origin: *");   
-      
-      $id_journal_pages = $params['id_journal_page'];
-      $notification = $params['name'];
-      $replace = '<span class="anchor" style="background-color: #FFFF00; font-size: 19px;"><b>'.$notification.'</b></span>';
-      
-      if (empty($id_journal_pages)) {
-        throw new \Exception('Erro interno. O cod do usuário esta vazio');
+      try {
+        header("Access-Control-Allow-Origin: *");   
+        $params = \Yii::$app->request->post('params');
+        $id_journal_pages = $params['id_journal_page'];
+        $notification = $params['name'];
+        $replace = '<span class="anchor" style="background-color: #FFFF00; font-size: 19px;"><b>'.$notification.'</b></span>';
+
+        if (empty($id_journal_pages)) {
+          throw new \Exception('Erro interno. O cod do usuário esta vazio');
+        }
+
+        $jp = JournalPages::find()
+                ->where(['id_journal_pages' => $id_journal_pages])              
+                ->asArray()
+                ->all()[0];   
+
+        $data = Journal::findBySql("
+                  SELECT DATE_FORMAT(journal.publish_date, '%d/%m/%Y') as publish_date
+                  FROM journal
+                  JOIN journal_pages on journal_pages.id_journal = journal.id_journal
+                  WHERE journal_pages.id_journal_pages = :ID_JOURNAL_PAGES  
+        ",[':ID_JOURNAL_PAGES' => $id_journal_pages])->asArray()->all()[0]['publish_date'];
+
+        $jp['content'] = str_ireplace($notification, $replace, $jp['content'], $count);
+        $jp['numeroOcorrencias'] = $count;
+        $jp['dataPublicacao'] = $data;
+
+      }catch(\Exception $e){
+        die(json_encode(['status' => false, 'message' => $e->getMessage()]));
       }
-        
-      $jp = JournalPages::find()
-              ->where(['id_journal_pages' => $id_journal_pages])              
-              ->asArray()
-              ->all()[0];   
       
-      $data = Journal::findBySql("
-                SELECT DATE_FORMAT(journal.publish_date, '%d/%m/%Y') as publish_date
-                FROM journal
-                JOIN journal_pages on journal_pages.id_journal = journal.id_journal
-                WHERE journal_pages.id_journal_pages = :ID_JOURNAL_PAGES  
-      ",[':ID_JOURNAL_PAGES' => $id_journal_pages])->asArray()->all()[0]['publish_date'];
-             
-      $jp['content'] = str_ireplace($notification, $replace, $jp['content'], $count);
-      $jp['numeroOcorrencias'] = $count;
-      $jp['dataPublicacao'] = $data;
-      
-      return ['status' => true, 'message' => $jp];
+      die(json_encode(['status' => true, 'message' => $jp]));
    
   }
   public function actionGetOccurencesByNot($id_notification)
@@ -160,31 +165,36 @@ class ApiController extends ActiveController
       return ['status' => true, 'message' => $n];
   }
   
-  public function deleteNotifyByUser($params)
+  public function actionDeleteNotifyByUser()
   {
-      header("Access-Control-Allow-Origin: *");
-          
-      $idNot = $params['id_notification'];
+      try {
+        header("Access-Control-Allow-Origin: *");
         
-      if (empty($idNot)) {
-            throw new \Exception('Tente novamente');
+        $params = \Yii::$app->request->post('params');
+        $idNot = $params['id_notification'];
+
+        if (empty($idNot)) {
+              throw new \Exception('Tente novamente');
+        }
+
+        $not = Notification::findAll($idNot)[0];     
+        if (!$not->delete()) {
+              $erro = $not->getFirstErrors();
+              if (count($erro) > 0) {
+                  throw new \Exception(array_values($erro)[0]);
+              }
+        }
+      }catch(\Exception $e){
+          die(json_encode(['status' => false, 'message' => $e->getMessage()]));
       }
-        
-      $not = Notification::findAll($idNot)[0];     
-      if (!$not->delete()) {
-            $erro = $not->getFirstErrors();
-            if (count($erro) > 0) {
-                throw new \Exception(array_values($erro)[0]);
-            }
-      }
-      
-      return ['status' => true, 'message' => 'Sucesso'];
+          die(json_encode(['status' => true, 'message' => 'Sucesso']));
   }
   
-  public function addNotifyByUser($params)
+  public function actionAddNotifyByUser()
  {
-       header("Access-Control-Allow-Origin: *");
-
+      try{
+        header("Access-Control-Allow-Origin: *");
+        $params = \Yii::$app->request->post('params');
         $data = [];
         $data['id_user'] = $params['user_data']['id'];
         $data['name'] = $params['name'];
@@ -203,7 +213,11 @@ class ApiController extends ActiveController
            throw new \Exception(array_values($erro)[0]);
         }
         
-        return ['message' => $not->getAttributes()];
+      } catch(\Exception $e){
+            die(json_encode(['status'=> false, 'message' => $e->getMessage()]));
+          
+      }
+        die(json_encode(['status'=> true, 'message' => $not->getAttributes()]));
   }
   
    /**
@@ -213,16 +227,17 @@ class ApiController extends ActiveController
      */
     public function actionSignup()
     { 
+    
+        try{
         $params = \Yii::$app->request->post('params');
-        if (empty($params['email']) || empty($params['password'])) {
+        if (empty($params['email']) || empty($params['password']) || empty($params['idImprensa'])) {
             throw new \Exception('Por favor preencha todos os campos e tente novamente');
         }
-
         $email = $params['email'];
         $userName = $params['email'];
         $password = $params['password'];
         $idCompany = $params['idImprensa'];
-
+        
         $user = User::findByUsername($userName);
         if (is_null($user)) {
             $model = new SignupForm();
@@ -248,6 +263,13 @@ class ApiController extends ActiveController
                 throw new \Exception('Usuário ou senha incorreta');
             }
         }
+           $return = ['status' => true, 'message' => ''];
+           die(json_encode($return));
+        } catch(\Exception $e){
+           $return = ['status' => true, 'message' => $e->getMessage()];
+           die(json_encode($return));
+        }
+      
     }
     
    /**
