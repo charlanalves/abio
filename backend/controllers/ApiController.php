@@ -211,8 +211,9 @@ class ApiController extends ActiveController
      *
      * @return mixed
      */
-    public function signup($params)
-    {
+    public function signup()
+    { 
+        $params = \Yii::$app->request->post('params');
         if (empty($params['email']) || empty($params['password'])) {
             throw new \Exception('Por favor preencha todos os campos e tente novamente');
         }
