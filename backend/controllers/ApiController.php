@@ -211,7 +211,7 @@ class ApiController extends ActiveController
      *
      * @return mixed
      */
-    public function signup()
+    public function actionSignup()
     { 
         $params = \Yii::$app->request->post('params');
         if (empty($params['email']) || empty($params['password'])) {
