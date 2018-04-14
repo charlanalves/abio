@@ -38,7 +38,7 @@ class ApiController extends ActiveController
       return ArrayHelper::merge(parent::behaviors(), [
           [
               'class' => 'yii\filters\ContentNegotiator',
-              'only' => ['view', 'index','centralMethod','signup','deleteNotifyByUser','AddNotifyByUser'],  // in a controller
+              'only' => ['view', 'index','centralMethod','signup','deleteNotifyByUser','addNotifyByUser','getNotifyByUser'],  // in a controller
               // if in a module, use the following IDs for user actions
               // 'only' => ['user/view', 'user/index']
               'formats' => [
@@ -99,11 +99,11 @@ class ApiController extends ActiveController
 
  }
  
-  public function getNotifyByUser($params)
+  public function actionGetNotifyByUser()
  {
-   
+   try{
       header("Access-Control-Allow-Origin: *");   
-      
+      $params = \Yii::$app->request->post('params');
       $userId = $params['id'];
        
       if (empty($userId)) {
@@ -114,7 +114,9 @@ class ApiController extends ActiveController
               ->where(['id_user' => $userId])              
               ->asArray()
               ->all();     
-        
+   }catch(\Exception $e){
+      return ['status' => false, 'message' => $e->getMessage()];
+   } 
       return ['status' => true, 'message' => $nots];
    
   }
