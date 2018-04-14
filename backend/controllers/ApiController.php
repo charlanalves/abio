@@ -229,7 +229,7 @@ class ApiController extends ActiveController
      */
     public function actionSignup()
     { 
-    
+        header("Access-Control-Allow-Origin: *");
         try{
         $params = \Yii::$app->request->post('params');
         if (empty($params['email']) || empty($params['password']) || empty($params['idImprensa'])) {
