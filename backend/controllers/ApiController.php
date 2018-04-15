@@ -269,7 +269,7 @@ class ApiController extends ActiveController
            $return =  ['status'=> true,'message' => $user->getAttributes()];
            die(json_encode($return));
         } catch(\Exception $e){
-           $return = ['status' => true, 'message' => $e->getMessage()];
+           $return = ['status' => false, 'message' => $e->getMessage()];
            die(json_encode($return));
         }
       
