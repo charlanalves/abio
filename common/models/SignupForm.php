@@ -35,7 +35,7 @@ class SignupForm extends Model
             ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Já existe um usuário com esse e-mail.'],
 
             ['password', 'required'],
-            ['password', 'string', 'min' => 6, 'message' => 'A senha deve ter pelo menos 6 caracteres.'],
+          //  ['password', 'string', 'min' => 6, 'message' => 'A senha deve ter pelo menos 6 caracteres.'],
         ];
     }
 
