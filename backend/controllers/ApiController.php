@@ -181,7 +181,7 @@ class ApiController extends ActiveController
         $not = Notification::findAll($idNot)[0];  
         
 //       $existeOcorrenciaParaoAlerta =  \app\models\Occurrence::find()->params([':ID_NOTIFICATION' => $not->id_notification])->where(['id_notification'=>':ID_NOTIFICATION'])->exists();
-       $a = \frontend\models\Occurrence::deleteAll(['id_notification'=>':ID_NOTIFICATION'], [':ID_NOTIFICATION' => $not->id_notification]);     
+       $a = \frontend\models\Occurrence::deleteAll(['id_notification'=> $not->id_notification]);     
         if (!$not->delete()) {
               $erro = $not->getFirstErrors();
               if (count($erro) > 0) {
