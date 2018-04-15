@@ -20,7 +20,7 @@ class ProcessController extends \yii\web\Controller
     public function actionAlerts()
     {	
         try{
-          $today = date('Y-m-d');
+          $today = '2018-04-14';
           echo "TODAY IS ---.>>>> ". $today.'<BR>'; 
           $notifications = Notification::find()->all();
           echo "NOTIFICATIONS ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
@@ -90,14 +90,19 @@ class ProcessController extends \yii\web\Controller
         $oc->id_notification = $not->id_notification;
         $oc->id_journal_page = $page->id_journal_pages;
         $oc->content = $this->getContent($not->name, $page->content);
-        if (!$oc->save()){
-            $errors = json_encode($oc->getErrors());
-            throw new Exception($errors);
+       $ocorrenciaDuplicada =  Occurrence::find()->where(['id_notification'=>$not->id_notification,'id_journal_page'=>$page->id_journal_pages])->exists();
+        if(!$ocorrenciaDuplicada){
+            if (!$oc->save()){
+                $errors = json_encode($oc->getErrors());
+                throw new Exception($errors);
+            }else{
+                 echo "OCORRENCIA SALVA ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> $not->name"; 
+                        print'<pre>';
+                        print_r($oc);
+                echo "--------------------------------- ---.>>>><br><br><br> "; 
+            }
         }else{
-             echo "OCORRENCIA SALVA ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> $not->name"; 
-                    print'<pre>';
-                    print_r($oc);
-            echo "--------------------------------- ---.>>>><br><br><br> "; 
+            echo 'OCORENCIA DUPLICADA ABORTANDO SALVAMENTO.......';
         }
     }
     

@@ -9890,3 +9890,811 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1523586350.296
     'REQUEST_TIME' => 1523586350
 ]
+2018-04-14 18:49:43 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\models\Journal_pages::id_notification' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('id_notification')
+#1 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(99): yii\db\BaseActiveRecord->__get('id_notification')
+#2 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#3 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess(Array, Array)
+#4 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('alerts', Array)
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('process/alerts', Array)
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2018-04-14 18:49:43 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'advanced-frontend' => 'gh3q5i5gcq2v7n9oj67gfe0oc5'
+    '_csrf-frontend' => '77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; advanced-frontend=gh3q5i5gcq2v7n9oj67gfe0oc5; _csrf-frontend=77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '60434'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523724583.225
+    'REQUEST_TIME' => 1523724583
+]
+2018-04-14 18:50:35 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(101): yii\db\ActiveQuery->all()
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#6 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#7 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4
+The SQL being executed was: 
+                   SELECT count(*) existe FROM occurrence 
+                    WHERE 
+                    id_notification = 67
+                    id_journal_page =  211
+                    ' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), '\r\n             ...')
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(101): yii\db\ActiveQuery->all()
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#6 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#7 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4
+)
+
+2018-04-14 18:50:35 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'advanced-frontend' => 'gh3q5i5gcq2v7n9oj67gfe0oc5'
+    '_csrf-frontend' => '77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; advanced-frontend=gh3q5i5gcq2v7n9oj67gfe0oc5; _csrf-frontend=77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '60516'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523724635.425
+    'REQUEST_TIME' => 1523724635
+]
+2018-04-14 18:50:59 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(101): yii\db\ActiveQuery->all()
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#6 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#7 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4
+The SQL being executed was: 
+                   SELECT count(*) as existe FROM occurrence 
+                    WHERE 
+                    id_notification = 67
+                    id_journal_page =  211
+                    ' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), '\r\n             ...')
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(101): yii\db\ActiveQuery->all()
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#6 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#7 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4
+)
+
+2018-04-14 18:50:58 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'advanced-frontend' => 'gh3q5i5gcq2v7n9oj67gfe0oc5'
+    '_csrf-frontend' => '77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; advanced-frontend=gh3q5i5gcq2v7n9oj67gfe0oc5; _csrf-frontend=77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '60557'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523724658.737
+    'REQUEST_TIME' => 1523724658
+]
+2018-04-14 18:52:58 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: existe' in C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\ProcessController->actionAlerts()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction()
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-04-14 18:52:58 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'advanced-frontend' => 'gh3q5i5gcq2v7n9oj67gfe0oc5'
+    '_csrf-frontend' => '77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; advanced-frontend=gh3q5i5gcq2v7n9oj67gfe0oc5; _csrf-frontend=77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '60730'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523724778.096
+    'REQUEST_TIME' => 1523724778
+]
+2018-04-14 18:53:10 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: existe' in C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\ProcessController->actionAlerts()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction()
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-04-14 18:53:10 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'advanced-frontend' => 'gh3q5i5gcq2v7n9oj67gfe0oc5'
+    '_csrf-frontend' => '77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; advanced-frontend=gh3q5i5gcq2v7n9oj67gfe0oc5; _csrf-frontend=77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '60750'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523724790.103
+    'REQUEST_TIME' => 1523724790
+]
+2018-04-14 18:53:24 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(101): yii\db\ActiveQuery->all()
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#6 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#7 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4
+The SQL being executed was: 
+                   SELECT count(*)  existe FROM occurrence 
+                    WHERE 
+                    id_notification = 67 
+                    id_journal_page =  211
+                    ' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), '\r\n             ...')
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(101): yii\db\ActiveQuery->all()
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#6 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#7 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  211' at line 4
+)
+
+2018-04-14 18:53:24 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+    'advanced-frontend' => 'gh3q5i5gcq2v7n9oj67gfe0oc5'
+    '_csrf-frontend' => '77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D; advanced-frontend=gh3q5i5gcq2v7n9oj67gfe0oc5; _csrf-frontend=77261d243d74173eff5b83cef802c44554c3ab5189bc8d8f5d80f2f1e24a7b6ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Eez0xszrlZ3YZkB06omKkHwHwJmX2tL-%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '60775'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523724804.223
+    'REQUEST_TIME' => 1523724804
+]
+2018-04-15 03:17:10 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  208' at line 4' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(101): yii\db\ActiveQuery->all()
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#6 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#7 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  208' at line 4
+The SQL being executed was: 
+                   SELECT count(*)  existe FROM occurrence 
+                    WHERE 
+                    id_notification = 71 
+                    id_journal_page =  208
+                    ' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), '\r\n             ...')
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(101): yii\db\ActiveQuery->all()
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#6 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#7 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#12 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id_journal_page =  208' at line 4
+)
+
+2018-04-15 03:17:10 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '49298'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523755030.041
+    'REQUEST_TIME' => 1523755030
+]
+2018-04-15 03:19:11 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(370): yii\db\Command->queryScalar()
+#3 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(94): yii\db\Query->exists()
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#6 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#7 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'
+The SQL being executed was: SELECT EXISTS(SELECT * FROM `occurrence` WHERE (`id_notification`=71) AND (`status`=208))' in C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Schema.php:631
+Stack trace:
+#0 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT EXISTS(S...')
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\db\Query.php(370): yii\db\Command->queryScalar()
+#3 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(94): yii\db\Query->exists()
+#4 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(50): backend\controllers\ProcessController->saveOccurrence(Object(frontend\models\Journal_pages), Object(common\models\Notification))
+#5 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess('[<span class="t...', '[<span class="t...')
+#6 [internal function]: backend\controllers\ProcessController->actionAlerts()
+#7 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#8 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'status' in 'where clause'
+)
+
+2018-04-15 03:19:11 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '49384'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523755151.21
+    'REQUEST_TIME' => 1523755151
+]
+2018-04-15 03:25:10 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: ja' in C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php:97
+Stack trace:
+#0 C:\xampp\htdocs\abioback\backend\controllers\ProcessController.php(37): backend\controllers\ProcessController->findAndSaveOccurrenceAndProcess()
+#1 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\ProcessController->actionAlerts()
+#2 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#3 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#4 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#5 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction()
+#6 C:\xampp\htdocs\abioback\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#7 C:\xampp\htdocs\abioback\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2018-04-15 03:25:10 [::1][-][-][info][application] $_GET = [
+    'r' => 'process/alerts'
+]
+
+$_COOKIE = [
+    '__smToken' => 'SP8LwmcADFuq5QeyV1Qt2yUV'
+    '_ga' => 'GA1.1.1326076926.1504991290'
+    '__utma' => '111872281.1326076926.1504991290.1520641165.1520641165.1'
+    '__utmz' => '111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_identity-frontend' => 'c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"0v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '__smToken=SP8LwmcADFuq5QeyV1Qt2yUV; _ga=GA1.1.1326076926.1504991290; __utma=111872281.1326076926.1504991290.1520641165.1520641165.1; __utmz=111872281.1520641165.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity-frontend=c9dcb788f569a595948fdb6d876ed7906964d5a0fcad61ae28d8470ee6605263a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%220v4PI8YWT9XXN95DCOT4Oi7sm2vXiAP_%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\Charlan Santos\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Charlan Santos\\AppData\\Roaming\\npm;C:\\JavaScript\\ANT\\apache-ant-1.10.1\\bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin;C:\\Program Files\\Java\\jdk1.8.0_131;%ANDROID_HOME%\\platform-tools;%ANDROID_HOME%\\tools;C:\\JavaScript\\nodejs\\cordova;C:\\Users\\Charlan Santos\\AppData\\Roaming\\Composer\\vendor\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Win32) OpenSSL/1.0.2j PHP/5.6.30'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/abioback/backend/web/index.php'
+    'REMOTE_PORT' => '49416'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=process/alerts'
+    'REQUEST_URI' => '/abioback/backend/web/index.php?r=process/alerts'
+    'SCRIPT_NAME' => '/abioback/backend/web/index.php'
+    'PHP_SELF' => '/abioback/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1523755510.154
+    'REQUEST_TIME' => 1523755510
+]
