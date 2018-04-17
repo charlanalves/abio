@@ -20,7 +20,7 @@ class ProcessController extends \yii\web\Controller
     public function actionAlerts()
     {	
         try{
-          $today = '2018-04-14';
+          $today = date('Y-m-d');
           echo "TODAY IS ---.>>>> ". $today.'<BR>'; 
           $notifications = Notification::find()->all();
           echo "NOTIFICATIONS ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
