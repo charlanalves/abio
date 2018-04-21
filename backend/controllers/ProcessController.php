@@ -112,7 +112,7 @@ class ProcessController extends \yii\web\Controller
    private function getContent($findMe, $content) {        
         $posicao = strpos($this->tirarAcentos(strtolower($content)), $this->tirarAcentos(strtolower($findMe)));
         $aux = substr($content, $posicao);
-//        if($findMe == 'diario' || $findMe == 'diário'){
+//        if($findMe == 'diario' || $findMe == 'diário'){;;
 //            echo 'POSICAO LALALALLALAL';
 //            var_dump($this->tirarAcentos($content));
 //            var_dump($this->tirarAcentos($findMe));
@@ -125,7 +125,7 @@ class ProcessController extends \yii\web\Controller
    }
    
    private function strafter($string, $substring) {
-        $pos = strpos($string, $substring);
+        $pos = stripos($string, $substring);
         if ($pos === false)
          return $string;
         else  
