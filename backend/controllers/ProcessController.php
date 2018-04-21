@@ -109,10 +109,19 @@ class ProcessController extends \yii\web\Controller
         }
     }
     
-   private function getContent($findMe, $content) {       
-        $posicao = strpos($this->tirarAcentos($content), $this->tirarAcentos($findMe));
+   private function getContent($findMe, $content) {        
+        $posicao = strpos($this->tirarAcentos(strtolower($content)), $this->tirarAcentos(strtolower($findMe)));
         $aux = substr($content, $posicao);
-        return str_replace($this->tirarAcentos($findMe),"<b>$findMe</b>", substr($this->tirarAcentos($aux), 0,50));
+//        if($findMe == 'diario' || $findMe == 'diário'){
+//            echo 'POSICAO LALALALLALAL';
+//            var_dump($this->tirarAcentos($content));
+//            var_dump($this->tirarAcentos($findMe));
+//            var_dump($this->tirarAcentos($aux));
+//            var_dump($posicao);
+//            var_dump(str_ireplace($this->tirarAcentos($findMe),"<b>$findMe</b>", substr($this->tirarAcentos($aux), 0,50)));
+//            die;
+//       }
+        return str_ireplace($this->tirarAcentos($findMe),"<b>$findMe</b>", substr($this->tirarAcentos($aux), 0,50));
    }
    
    private function strafter($string, $substring) {
