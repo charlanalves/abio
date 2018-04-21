@@ -131,7 +131,7 @@ class ProcessController extends \yii\web\Controller
         else  
          return(substr($string, $pos+strlen($substring)));
   }
-    //Obtêm todos as paginas de todos os jornais da imprensa que usuario esta cadastrado
+    //Obtêm todos as paginas de todos os jornais não deletados da imprensa que usuário esta cadastrado
     private function getJournalPagesByDate($date, $userId)
     {	
         if (empty($date)){
@@ -146,6 +146,7 @@ class ProcessController extends \yii\web\Controller
               JOIN company_sessions ON company_sessions.id_session = journal_session.id_session              
               WHERE journal.publish_date = :curDate
               AND company_sessions.id_company = (select user.id_company from user where user.id = :userId)
+              AND journal.deleted_date is null
         ', [':curDate' => $date, ':userId' => $userId])->all();
     }
 }
