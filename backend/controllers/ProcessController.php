@@ -111,8 +111,8 @@ class ProcessController extends \yii\web\Controller
     
    private function getContent($findMe, $content) {       
         $posicao = strpos($this->tirarAcentos($content), $this->tirarAcentos($findMe));
-        $aux = substr($this->tirarAcentos($content), $posicao);
-        return str_replace($this->tirarAcentos($findMe),"<b>$this->tirarAcentos($findMe)</b>", substr($this->tirarAcentos($aux), 0,50));
+        $aux = substr($content, $posicao);
+        return str_replace($this->tirarAcentos($findMe),"<b>$findMe</b>", substr($this->tirarAcentos($aux), 0,50));
    }
    
    private function strafter($string, $substring) {
