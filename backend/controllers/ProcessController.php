@@ -15,26 +15,21 @@ use frontend\models\Occurrence;
 class ProcessController extends \yii\web\Controller
 {
     
-  
+  public $today;
  
     public function actionAlerts()
     {	
         try{
-          $today = date('Y-m-d');
-          echo "TODAY IS ---.>>>> ". $today.'<BR>'; 
-          $notifications = Notification::find()->all();
+          $this->today = date('Y-m-d');
+          echo "TODAY IS ---.>>>> ". $this->today.'<BR>'; 
+          $notifications = Notification::find()->all();         
           echo "NOTIFICATIONS ---.>>>>>>>>>>>>>>>>>>>>>>>>>>> "; 
           print'<pre>';
           print_r($notifications);
           echo "--------------------------------- ---.>>>><br><br><br> "; 
-          $pages = $this->getJournalPagesByDate($today);
+        
           
-          echo "getJournalPagesByDate ---.>>>>>>>>>>>>>>>>>>>>>>>>>>><br><br><br> "; 
-          print'<pre>';
-          print_r($pages);
-          echo "--------------------------------- ---.>>>><br><br><br> "; 
-          
-          $this->findAndSaveOccurrenceAndProcess($pages, $notifications);
+          $this->findAndSaveOccurrenceAndProcess($notifications);
         } catch (Exception $e) {
             $error = $e->getMessage();
             $this->saveProcess($not); 
@@ -42,9 +37,14 @@ class ProcessController extends \yii\web\Controller
         $a = 1;
     }
     
-    private function findAndSaveOccurrenceAndProcess($pages, $notifications)
+    private function findAndSaveOccurrenceAndProcess($notifications)
     {	
         foreach ($notifications as $not) {
+          $pages = $this->getJournalPagesByDate($this->today, $not['id_user']);
+          echo "getJournalPagesByDate ---.>>>>>>>>>>>>>>>>>>>>>>>>>>><br><br><br> "; 
+          print'<pre>';
+          print_r($pages);
+          echo "--------------------------------- ---.>>>><br><br><br> "; 
             foreach ($pages as $page) {
                if ($this->existOccurrence($page, $not)) {
                     $this->saveOccurrence($page, $not);
@@ -122,17 +122,21 @@ class ProcessController extends \yii\web\Controller
         else  
          return(substr($string, $pos+strlen($substring)));
   }
-    
-    private function getJournalPagesByDate($date)
+    //Obtêm todos as paginas de todos os jornais da imprensa que usuario esta cadastrado
+    private function getJournalPagesByDate($date, $userId)
     {	
         if (empty($date)){
             return false;
         }
+        
         return JournalPages::findBySql('          
-              SELECT journal_pages.* 
+              SELECT journal_pages.* , company_sessions.id_company
               FROM journal 
               JOIN journal_pages ON journal_pages.id_journal = journal.id_journal
+              JOIN journal_session ON journal_session.id_journal = journal_pages.id_journal              
+              JOIN company_sessions ON company_sessions.id_session = journal_session.id_session              
               WHERE journal.publish_date = :curDate
-        ', [':curDate' => $date])->all();
+              AND company_sessions.id_company = (select user.id_company from user where user.id = :userId)
+        ', [':curDate' => $date, ':userId' => $userId])->all();
     }
 }
