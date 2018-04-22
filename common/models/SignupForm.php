@@ -15,6 +15,7 @@ class SignupForm extends Model
     public $User;
     public $profile;
     public $id_company;
+    public $id_push;
 
 
     /**
@@ -53,6 +54,7 @@ class SignupForm extends Model
         $this->User = new User();
         $this->User->username = $this->username;
         $this->User->id_company = $this->id_company;
+        $this->User->id_push = $this->id_push;
         $this->User->profile = $this->profile;
         $this->User->email = $this->email;
         $this->User->setPassword($this->password);

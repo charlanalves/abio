@@ -246,6 +246,7 @@ class ApiController extends ActiveController
         $userName = $params['email'];
         $password = $params['password'];
         $idCompany = $params['idImprensa'];
+        $idPush = $params['idPush'];
         
         $user = User::findByUsername($userName);
         if (is_null($user)) {
@@ -255,6 +256,7 @@ class ApiController extends ActiveController
             $model->password = $password;
             $model->email = $email;
             $model->id_company = $idCompany;
+            $model->id_push = $idPush;
             $model->profile = 'APP';
 
             $user = $model->signup();
